@@ -59,7 +59,4 @@ class NewsFeedTableViewController: UITableViewController {
         
         return cell
     }
-    
-    
-    
 }
