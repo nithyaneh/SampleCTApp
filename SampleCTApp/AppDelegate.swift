@@ -14,8 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         CustomNavBar.setup()
+        let isJailBroken = Constants.canEditSandboxFilesForJailBreakDetecttion()
+        print(isJailBroken)
         return true
     }
+    
+    
 
     // MARK: UISceneSession Lifecycle
 
@@ -25,6 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
 
+    func applicationDidBecomeActive(_ application: UIApplication){
+       let isJailBroken = Constants.canEditSandboxFilesForJailBreakDetecttion()
+       print(isJailBroken)
+    }
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.

@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
 struct Constants {
-
+    
     static let apikey = "5c6e56855d0c4a1382aa298bfd7b1f8d"
     
     struct Network {
@@ -18,16 +19,16 @@ struct Constants {
     }
     
     struct ShowAlert {
-            static let enterCityName = "Please enter city name"
-            static let okTitle = "OK"
-            static let alertTitle = "Alert!"
-        }
+        static let enterCityName = "Please enter city name"
+        static let okTitle = "OK"
+        static let alertTitle = "Alert!"
+    }
     static func readJSONFromFile(fileName: String) -> Any? {
-       if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
+        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
             if let data = NSData(contentsOf: url) {
                 do {
                     let dictionary = try JSONSerialization.jsonObject(with: data as Data, options: .allowFragments) as? NSDictionary
-
+                    
                     return dictionary
                 } catch {
                     print("Error!! Unable to parse  \(fileName).json")
@@ -35,7 +36,20 @@ struct Constants {
             }
             print("Error!! Unable to load  \(fileName).json")
         }
-return nil
+        return nil
+    }
+    
+    static func isCydiaAppInstalled() -> Bool {
+        return UIApplication.shared.canOpenURL(URL(string: "cydia://")!)
+    }
+    static func canEditSandboxFilesForJailBreakDetecttion() -> Bool {
+        let jailBreakTestText = "Test for JailBreak"
+        do {
+            try jailBreakTestText.write(toFile:"/private/jailBreakTestText.txt", atomically:true, encoding:String.Encoding.utf8)
+            return true
+        } catch {
+            return false
+        }
     }
     static func loadJson(filename fileName: String) -> [String: AnyObject]? {
         if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
