@@ -14,12 +14,9 @@ struct Resource<T> {
     let parce: (Data) -> T?
 }
 
-var activityIndicator = UIActivityIndicatorView()
-
 class Webservice {
     
     func load<T>(_ resource: Resource<T>, completion: @escaping (T?) -> ()) {
-        activityIndicator.startAnimating()
 
         URLSession.shared.dataTask(with: resource.url) { data, response, error in
             

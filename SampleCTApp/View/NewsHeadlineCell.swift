@@ -10,6 +10,8 @@ import UIKit
 
 class NewsHeadlineCell: UITableViewCell {
     
+    // MARK:- Properties
+    
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var descriptionLbl: UILabel!
     @IBOutlet weak var headlineImgView: UIImageView!

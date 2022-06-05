@@ -10,18 +10,25 @@ import UIKit
 import Reachability
 
 class NewsFeedTableViewController: UITableViewController {
+    //MARK:- Properties
     
     private var categoryListVM: CategoryListViewModel!
+
+    
+    //MARK:- View Controller Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         populateHeadlinesAndArticles()
+        self.view.activityStartAnimating(activityColor: UIColor.white, backgroundColor: UIColor.black.withAlphaComponent(0.5))
+
     }
     
     private func populateHeadlinesAndArticles() {
         if ConnectionManager.shared.hasConnectivity() {
             CategoryService().getAllHeadlinesForAllCategories { [weak self] categories in
+                self?.view.activityStopAnimating()
                 self?.categoryListVM = CategoryListViewModel(categories: categories)
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
@@ -33,8 +40,10 @@ class NewsFeedTableViewController: UITableViewController {
         }
     }
     
+    //MARK:- Delegates and Datasource
+    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return self.categoryListVM.heightForHeaderInSection(section)
+        return 60.0
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -43,11 +52,11 @@ class NewsFeedTableViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return self.categoryListVM == nil ? 0 : self.categoryListVM.numberOfSections
+        return self.categoryListVM == nil ? 0 : self.categoryListVM.categories.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.categoryListVM.numberOfRowsInSection(section)
+        return self.categoryListVM.categories[section].articles.count == 0 ? 0 : self.categoryListVM.categories[section].articles.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

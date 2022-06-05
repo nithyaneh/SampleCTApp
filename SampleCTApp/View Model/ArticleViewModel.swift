@@ -13,7 +13,10 @@ struct ArticleViewModel {
     private(set) var article: Article
 }
 
+// MARK:- DI
+
 extension ArticleViewModel {
+    
     init(_ article: Article) {
         self.article = article
     }

@@ -17,8 +17,6 @@ class SampleCTAppTests: XCTestCase {
     
     private var article: Article?
     
-    //var categories = CategoryListViewModel()
-
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test
@@ -28,16 +26,11 @@ class SampleCTAppTests: XCTestCase {
     func testMockForCategoryListViewModel() {
 
         
-    guard let a = self.categoryListViewModel?.numberOfRowsInSection(1) else {
-                 return
-             }
-             XCTAssertEqual(a, 1)
-
-             guard articleListViewModel != nil else {
+     guard articleListViewModel != nil else {
                  return XCTFail("articleListViewModel, should be not nil")
              }
         
-             guard categoryListViewModel != nil else {
+     guard categoryListViewModel != nil else {
                  return XCTFail("categoryListViewModel, should be not nil")
              }
         
