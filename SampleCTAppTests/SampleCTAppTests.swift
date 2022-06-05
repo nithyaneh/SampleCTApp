@@ -7,11 +7,46 @@
 //
 
 import XCTest
+@testable import SampleCTApp
 
 class SampleCTAppTests: XCTestCase {
+    
+    private var categoryListViewModel : CategoryListViewModel?
+    
+    private var articleListViewModel: ArticleViewModel?
+    
+    private var article: Article?
+    
+    //var categories = CategoryListViewModel()
+
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        // Put setup code here. This method is called before the invocation of each test
+       // articleListViewModel = ArticleViewModel(article: )
+    }
+    
+    func testMockForCategoryListViewModel() {
+
+        
+    guard let a = self.categoryListViewModel?.numberOfRowsInSection(1) else {
+                 return
+             }
+             XCTAssertEqual(a, 1)
+
+             guard articleListViewModel != nil else {
+                 return XCTFail("articleListViewModel, should be not nil")
+             }
+        
+             guard categoryListViewModel != nil else {
+                 return XCTFail("categoryListViewModel, should be not nil")
+             }
+        
+    }
+        
+    
+    func testMockBusinessAPISuccess() {
+        
+        
     }
 
     override func tearDownWithError() throws {

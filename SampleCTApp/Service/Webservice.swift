@@ -25,6 +25,7 @@ class Webservice {
             
             if let data = data {
                 DispatchQueue.main.async {
+                  
                     completion(resource.parce(data))
                 }
             } else {
