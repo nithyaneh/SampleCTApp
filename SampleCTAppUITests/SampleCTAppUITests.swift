@@ -40,18 +40,11 @@ class SampleCTAppUITests: XCTestCase {
         app.launch()
     }
     
-    func testTable() {
-        let myTable = app.tables.matching(identifier: "NewsTableViewIdentifier")
-        let cell = myTable.cells.element(matching: .cell, identifier: "newCell_0")
-        cell.tap()
-    }
-    
     func testTableCount() {
-           let app = XCUIApplication()
-           let tablesQuery = app.tables
-           let count = tablesQuery.cells.count
-           XCTAssert(count > 0)
-
+        let app = XCUIApplication()
+        XCTAssertEqual(app.tables.count, 1)
+        let table = app.tables.element(boundBy: 0)
+        XCTAssertEqual(table.cells.count, 80)
     }
 
     func testExample() throws {

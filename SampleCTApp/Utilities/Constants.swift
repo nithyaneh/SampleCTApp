@@ -11,7 +11,7 @@ import UIKit
 
 struct Constants {
     
-    static let apikey = "5c6e56855d0c4a1382aa298bfd7b1f8d"
+    static let apikey = "d9435b3ac8e1464ea4b9e800a22680ca"
     
     struct Network {
         static let errorMessage = "Please check your internet connection and try again"
