@@ -7,9 +7,14 @@
 //
 
 import XCTest
+@testable import SampleCTApp
 
 class SampleCTAppUITests: XCTestCase {
 
+    private var app: XCUIApplication!
+   // private var contentViewPage: ContentViewPage!
+    var timer: Timer!
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
@@ -21,6 +26,32 @@ class SampleCTAppUITests: XCTestCase {
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+        timer = nil
+    }
+    
+    override func setUp() {
+        app = XCUIApplication()
+        continueAfterFailure = false
+        timer = Timer()
+        app.launch()
+    }
+    
+    func testTable() {
+        let myTable = app.tables.matching(identifier: "NewsTableViewIdentifier")
+        let cell = myTable.cells.element(matching: .cell, identifier: "newCell_0")
+        cell.tap()
+    }
+    
+    func testTableCount() {
+           let app = XCUIApplication()
+           let tablesQuery = app.tables
+           let count = tablesQuery.cells.count
+           XCTAssert(count > 0)
+
     }
 
     func testExample() throws {

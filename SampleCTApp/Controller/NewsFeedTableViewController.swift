@@ -22,6 +22,7 @@ class NewsFeedTableViewController: UITableViewController {
         
         populateHeadlinesAndArticles()
         self.view.activityStartAnimating(activityColor: UIColor.white, backgroundColor: UIColor.black.withAlphaComponent(0.5))
+        tableView.accessibilityIdentifier = "NewsTableViewIdentifier"
 
     }
     
@@ -62,6 +63,7 @@ class NewsFeedTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "NewsHeadlineCell", for: indexPath) as? NewsHeadlineCell else { fatalError("NewsHeadlineCell not found") }
         tableView.separatorStyle = .singleLine
+        cell.accessibilityIdentifier = "newCell_\(indexPath.row)"
         let articleVM = self.categoryListVM.categoryAtIndex(index: indexPath.section).articleAtIndex(index: indexPath.row)
         
         cell.configure(vm: articleVM)

@@ -11,51 +11,85 @@ import XCTest
 
 class SampleCTAppTests: XCTestCase {
     
-    private var categoryListViewModel : CategoryListViewModel?
-    
     private var articleListViewModel: ArticleViewModel?
-    
     private var article: Article?
+    private var articleArray: [Article] = []
+    private var sourceData: NewsSourcesResponse?
+    private var filename: String?
     
-
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test
-       // articleListViewModel = ArticleViewModel(article: )
-    }
-    
-    func testMockForCategoryListViewModel() {
-
-        
-     guard articleListViewModel != nil else {
-                 return XCTFail("articleListViewModel, should be not nil")
-             }
-        
-     guard categoryListViewModel != nil else {
-                 return XCTFail("categoryListViewModel, should be not nil")
-             }
-        
-    }
-        
-    
-    func testMockBusinessAPISuccess() {
-        
-        
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
+        // articleListViewModel = ArticleViewModel(article: )
+        let currentOperator = "Business"
+        switch currentOperator {
+        case "Business":
+            filename = "News_Business"
+        case "Sports":
+            filename = "News_Sports"
+        case "Entertainment":
+            filename = "News_Entertainment"
+        case "General":
+            filename = "News_General"
+        default:
+            break
         }
+        guard let fileData = filename else {
+            return
+        }
+        let data = try getData(fromJSON: fileData)
+        sourceData = try JSONDecoder().decode(NewsSourcesResponse.self, from: data)
+        articleArray = try JSONDecoder().decode(NewsSourcesResponse.self, from: data).articles
+        
     }
+    
+    func testMockForArtistViewModel() {
+        for article in articleArray {
+            let articleViewModel = ArticleViewModel(article: article)
+            XCTAssert(articleArray.count == 20, "All articles loaded properly")
+            XCTAssertNotNil(articleViewModel, "The article view model should not be nil.")
+            XCTAssertNotNil(article.title, "The title should not be nil")
+            XCTAssertNotNil(article.description, "The description should not be nil")
+            XCTAssertNotNil(article.sourceName, "The sourcename should not be nil")
+            XCTAssertNotNil(article.imageURL, "The imageURL should not be nil")
+        }
+       
+    }
+
+override func tearDownWithError() throws {
+    article = nil
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
+}
+
+func testExample() throws {
+    // This is an example of a functional test case.
+    // Use XCTAssert and related functions to verify your tests produce the correct results.
+}
+
+func testPerformanceExample() throws {
+    // This is an example of a performance test case.
+    measure {
+        // Put the code you want to measure the time of here.
+    }
+}
 
 }
+extension XCTestCase {
+    enum TestError: Error {
+        case fileNotFound
+    }
+    
+    func getData(fromJSON fileName: String) throws -> Data {
+        let bundle = Bundle(for: type(of: self))
+        guard let url = bundle.url(forResource: fileName, withExtension: "json") else {
+            XCTFail("Missing File: \(fileName).json")
+            throw TestError.fileNotFound
+        }
+        do {
+            let data = try Data(contentsOf: url)
+            return data
+        } catch {
+            throw error
+        }
+    }
+}
+

@@ -10,8 +10,6 @@
 		184BF83D284A35B2000A26A1 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BF83C284A35B2000A26A1 /* AlertHandler.swift */; };
 		184BF83F284A3751000A26A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BF83E284A3751000A26A1 /* Constants.swift */; };
 		184BF841284A3940000A26A1 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BF840284A3940000A26A1 /* ConnectionManager.swift */; };
-		184BF84E284CE320000A26A1 /* DataMocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BF84C284CE320000A26A1 /* DataMocker.swift */; };
-		184BF84F284CE320000A26A1 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BF84D284CE320000A26A1 /* MockURLProtocol.swift */; };
 		184BF851284CE953000A26A1 /* News_Business.json in Resources */ = {isa = PBXBuildFile; fileRef = 184BF850284CE953000A26A1 /* News_Business.json */; };
 		184BF855284CF8CF000A26A1 /* News_Sports.json in Resources */ = {isa = PBXBuildFile; fileRef = 184BF852284CF8CE000A26A1 /* News_Sports.json */; };
 		184BF856284CF8CF000A26A1 /* News_Entertainment.json in Resources */ = {isa = PBXBuildFile; fileRef = 184BF853284CF8CE000A26A1 /* News_Entertainment.json */; };
@@ -64,8 +62,6 @@
 		184BF83C284A35B2000A26A1 /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
 		184BF83E284A3751000A26A1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		184BF840284A3940000A26A1 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
-		184BF84C284CE320000A26A1 /* DataMocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataMocker.swift; path = "../../../Downloads/WeatherInformationIOS-main/WeatherInformationTests/DataMocker.swift"; sourceTree = "<group>"; };
-		184BF84D284CE320000A26A1 /* MockURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockURLProtocol.swift; path = "../../../Downloads/WeatherInformationIOS-main/WeatherInformationTests/MockURLProtocol.swift"; sourceTree = "<group>"; };
 		184BF850284CE953000A26A1 /* News_Business.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = News_Business.json; sourceTree = "<group>"; };
 		184BF852284CF8CE000A26A1 /* News_Sports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = News_Sports.json; sourceTree = "<group>"; };
 		184BF853284CF8CE000A26A1 /* News_Entertainment.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = News_Entertainment.json; sourceTree = "<group>"; };
@@ -259,8 +255,6 @@
 			isa = PBXGroup;
 			children = (
 				18E9FDC8284A20670053C9AE /* SampleCTAppTests.swift */,
-				184BF84C284CE320000A26A1 /* DataMocker.swift */,
-				184BF84D284CE320000A26A1 /* MockURLProtocol.swift */,
 				18E9FDCA284A20670053C9AE /* Info.plist */,
 			);
 			path = SampleCTAppTests;
@@ -567,8 +561,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				184BF84F284CE320000A26A1 /* MockURLProtocol.swift in Sources */,
-				184BF84E284CE320000A26A1 /* DataMocker.swift in Sources */,
 				18E9FDC9284A20670053C9AE /* SampleCTAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
