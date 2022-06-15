@@ -8,6 +8,7 @@ target 'SampleCTApp' do
   # Pods for SampleCTApp
 
   pod 'ReachabilitySwift'
+  pod 'SwiftLint'
 
   target 'SampleCTAppTests' do
     inherit! :search_paths

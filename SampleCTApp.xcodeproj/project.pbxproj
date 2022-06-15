@@ -131,6 +131,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180E02DD2859EB820072C0D6 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				18E9FD4F284A0A8F0053C9AE /* Main.storyboard */,
+				18E9FD52284A0A9D0053C9AE /* Assets.xcassets */,
+				18E9FD54284A0A9D0053C9AE /* LaunchScreen.storyboard */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		180E02DE2859ECCA0072C0D6 /* Appdelegate */ = {
+			isa = PBXGroup;
+			children = (
+				18E9FD49284A0A8F0053C9AE /* AppDelegate.swift */,
+				18E9FD4B284A0A8F0053C9AE /* SceneDelegate.swift */,
+			);
+			path = Appdelegate;
+			sourceTree = "<group>";
+		};
 		184BF858284CF9A5000A26A1 /* MockData */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,20 +186,17 @@
 		18E9FD48284A0A8F0053C9AE /* SampleCTApp */ = {
 			isa = PBXGroup;
 			children = (
-				18E9FD49284A0A8F0053C9AE /* AppDelegate.swift */,
-				18E9FD4B284A0A8F0053C9AE /* SceneDelegate.swift */,
+				180E02DE2859ECCA0072C0D6 /* Appdelegate */,
 				18E9FD4D284A0A8F0053C9AE /* ViewController.swift */,
 				184BF858284CF9A5000A26A1 /* MockData */,
-				18E9FD75284A0CBA0053C9AE /* Utilities */,
+				18E9FD75284A0CBA0053C9AE /* Helpers */,
 				18E9FD70284A0C5A0053C9AE /* View */,
 				18E9FD6B284A0BEC0053C9AE /* Service */,
 				18E9FD66284A0BAB0053C9AE /* Model */,
 				18E9FD61284A0B250053C9AE /* View Model */,
 				18E9FD5F284A0B060053C9AE /* Controller */,
-				18E9FD4F284A0A8F0053C9AE /* Main.storyboard */,
-				18E9FD52284A0A9D0053C9AE /* Assets.xcassets */,
-				18E9FD54284A0A9D0053C9AE /* LaunchScreen.storyboard */,
 				18E9FD57284A0A9D0053C9AE /* Info.plist */,
+				180E02DD2859EB820072C0D6 /* Utilities */,
 			);
 			path = SampleCTApp;
 			sourceTree = "<group>";
@@ -228,7 +244,7 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		18E9FD75284A0CBA0053C9AE /* Utilities */ = {
+		18E9FD75284A0CBA0053C9AE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				18E9FD76284A0CE30053C9AE /* CustomNavigationbar.swift */,
@@ -237,7 +253,7 @@
 				184BF840284A3940000A26A1 /* ConnectionManager.swift */,
 				18E9FD78284A0D5B0053C9AE /* Extensions */,
 			);
-			path = Utilities;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		18E9FD78284A0D5B0053C9AE /* Extensions */ = {
