@@ -16,6 +16,7 @@ class SampleCTAppTests: XCTestCase {
     private var articleArray: [Article] = []
     private var sourceData: NewsSourcesResponse?
     private var filename: String?
+    private var data: Data?
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test
@@ -36,23 +37,30 @@ class SampleCTAppTests: XCTestCase {
         guard let fileData = filename else {
             return
         }
-        let data = try getData(fromJSON: fileData)
-        sourceData = try JSONDecoder().decode(NewsSourcesResponse.self, from: data)
-        articleArray = try JSONDecoder().decode(NewsSourcesResponse.self, from: data).articles
+        data = try getData(fromJSON: fileData)
+        guard let jsonData = data else {
+            return
+        }
+        sourceData = try JSONDecoder().decode(NewsSourcesResponse.self, from: jsonData)
+        articleArray = try JSONDecoder().decode(NewsSourcesResponse.self, from: jsonData).articles
         
     }
     
     func testMockForArtistViewModel() {
         for article in articleArray {
+            
             let articleViewModel = ArticleViewModel(article: article)
-            XCTAssert(articleArray.count == 20, "All articles loaded properly")
+            XCTAssert(articleArray.count > 0, "Data not received")
+            XCTAssert(articleArray.count == 20 , "All articles are not loaded properly")
             XCTAssertNotNil(articleViewModel, "The article view model should not be nil.")
             XCTAssertNotNil(article.title, "The title should not be nil")
-            XCTAssertNotNil(article.description, "The description should not be nil")
             XCTAssertNotNil(article.sourceName, "The sourcename should not be nil")
-            XCTAssertNotNil(article.imageURL, "The imageURL should not be nil")
+            
+            guard let jsonData = data else {
+                return
+            }
+            XCTAssertNoThrow(try JSONDecoder().decode(NewsSourcesResponse.self, from: jsonData))
         }
-       
     }
 
 override func tearDownWithError() throws {
