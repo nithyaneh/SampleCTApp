@@ -45,7 +45,7 @@ class HomeViewUITests: XCTestCase {
        // app.launch()
         let waitExpectation = expectation(description: "Waiting")
         XCTAssert(app.buttons["Search"].exists)
-        app.buttons["Search"].tap()
+        app.buttons["search"].tap()
         waitExpectation.fulfill()
         waitForExpectations(timeout: 5.0)
         XCTAssert(app.navigationBars["News"].exists)

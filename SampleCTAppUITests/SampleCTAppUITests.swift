@@ -58,7 +58,7 @@ class SampleCTAppUITests: XCTestCase {
         let searchButton =  app.buttons["Search"].staticTexts["Search"]
         let waitExpectation = expectation(description: "Waiting")
         XCTAssertTrue(searchButton.isHittable, "Search Button is Hittable")
-        app.buttons["dropButton"].tap()
+        //app.buttons["dropButton"].tap()
         searchButton.tap()
         waitExpectation.fulfill()
         waitForExpectations(timeout: 60)

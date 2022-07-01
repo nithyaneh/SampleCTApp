@@ -24,6 +24,9 @@ class Webservice : WebserviceProtocol {
         guard let url = URL(string: endpoint.baseURL + endpoint.path) else {
             return .failure(.invalidURL)
         }
+        if !ConnectionManager.shared.hasConnectivity() {
+            return .failure(.connectionError)
+        }
         var request = URLRequest(url: url)
         request.httpMethod = endpoint.method.rawValue
         

@@ -33,13 +33,11 @@ class NewsFeedTableViewController: UITableViewController {
     }
     
     private func loadNewsDataWithTableView() {
-        if ConnectionManager.shared.hasConnectivity() {
-            Task { [weak self] in
+           
+        Task { [weak self] in
                 await self?.newsDataViewModel.getData(category: categoryTitle)
             }
-        } else {
-            AlertHandler.showAlert(forMessage: Constants.Network.errorTitle, title: Constants.Network.errorMessage, defaultButtonTitle: Constants.ShowAlert.okTitle, sourceViewController: self)
-        }
+        
         newsDataViewModel.reloadArticleList = { [weak self] (articles) in
             DispatchQueue.main.async {
                 self?.arrArticles = articles
