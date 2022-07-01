@@ -12,7 +12,10 @@
 		184BF83D284A35B2000A26A1 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BF83C284A35B2000A26A1 /* AlertHandler.swift */; };
 		184BF83F284A3751000A26A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BF83E284A3751000A26A1 /* Constants.swift */; };
 		184BF841284A3940000A26A1 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BF840284A3940000A26A1 /* ConnectionManager.swift */; };
-		185FE7FE286E171A0089956E /* Business_US.json in Resources */ = {isa = PBXBuildFile; fileRef = 185FE7FC286E10030089956E /* Business_US.json */; };
+		185FE7FE286E171A0089956E /* Business_in.json in Resources */ = {isa = PBXBuildFile; fileRef = 185FE7FC286E10030089956E /* Business_in.json */; };
+		1875D5DF286F605D002C323D /* Entertainment_in.json in Resources */ = {isa = PBXBuildFile; fileRef = 1875D5DC286F605D002C323D /* Entertainment_in.json */; };
+		1875D5E0286F605D002C323D /* Sports_in.json in Resources */ = {isa = PBXBuildFile; fileRef = 1875D5DD286F605D002C323D /* Sports_in.json */; };
+		1875D5E1286F605D002C323D /* General_in.json in Resources */ = {isa = PBXBuildFile; fileRef = 1875D5DE286F605D002C323D /* General_in.json */; };
 		1889E4D4286D7E190035537E /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889E4D3286D7E190035537E /* ErrorHandler.swift */; };
 		1889E4D6286D7E710035537E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889E4D5286D7E710035537E /* Endpoint.swift */; };
 		1889E4D9286D7ED00035537E /* CategoryEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889E4D8286D7ED00035537E /* CategoryEndpoint.swift */; };
@@ -61,7 +64,10 @@
 		184BF83C284A35B2000A26A1 /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
 		184BF83E284A3751000A26A1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		184BF840284A3940000A26A1 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
-		185FE7FC286E10030089956E /* Business_US.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Business_US.json; sourceTree = "<group>"; };
+		185FE7FC286E10030089956E /* Business_in.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Business_in.json; sourceTree = "<group>"; };
+		1875D5DC286F605D002C323D /* Entertainment_in.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Entertainment_in.json; sourceTree = "<group>"; };
+		1875D5DD286F605D002C323D /* Sports_in.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sports_in.json; sourceTree = "<group>"; };
+		1875D5DE286F605D002C323D /* General_in.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = General_in.json; sourceTree = "<group>"; };
 		1889E4D3286D7E190035537E /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		1889E4D5286D7E710035537E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		1889E4D8286D7ED00035537E /* CategoryEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEndpoint.swift; sourceTree = "<group>"; };
@@ -147,7 +153,10 @@
 		184BF858284CF9A5000A26A1 /* MockData */ = {
 			isa = PBXGroup;
 			children = (
-				185FE7FC286E10030089956E /* Business_US.json */,
+				185FE7FC286E10030089956E /* Business_in.json */,
+				1875D5DD286F605D002C323D /* Sports_in.json */,
+				1875D5DC286F605D002C323D /* Entertainment_in.json */,
+				1875D5DE286F605D002C323D /* General_in.json */,
 			);
 			path = MockData;
 			sourceTree = "<group>";
@@ -435,7 +444,10 @@
 			files = (
 				18E9FD56284A0A9D0053C9AE /* LaunchScreen.storyboard in Resources */,
 				18E9FD53284A0A9D0053C9AE /* Assets.xcassets in Resources */,
+				1875D5E1286F605D002C323D /* General_in.json in Resources */,
 				18E9FD51284A0A8F0053C9AE /* Main.storyboard in Resources */,
+				1875D5E0286F605D002C323D /* Sports_in.json in Resources */,
+				1875D5DF286F605D002C323D /* Entertainment_in.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,7 +455,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				185FE7FE286E171A0089956E /* Business_US.json in Resources */,
+				185FE7FE286E171A0089956E /* Business_in.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
