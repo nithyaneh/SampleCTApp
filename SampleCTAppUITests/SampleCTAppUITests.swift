@@ -59,7 +59,6 @@ class SampleCTAppUITests: XCTestCase {
         let waitExpectation = expectation(description: "Waiting")
         XCTAssertTrue(searchButton.isHittable, "Search Button is Hittable")
         app.buttons["dropButton"].tap()
-        dropDown.hide()
         searchButton.tap()
         waitExpectation.fulfill()
         waitForExpectations(timeout: 60)

@@ -37,8 +37,7 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func showDropDown(_ sender: Any) {
-       // dropDown.show()
-        self.dropdownLabel.text = "Business"
+        dropDown.show()
         goButton.isUserInteractionEnabled = true
     }
     
