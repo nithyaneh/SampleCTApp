@@ -1,0 +1,266 @@
+{
+    "status": "ok",
+    "totalResults": 70,
+    "articles": [
+        {
+            "source": {
+                "id": "the-wall-street-journal",
+                "name": "The Wall Street Journal"
+            },
+            "author": "Akane Otani and Will Horner",
+            "title": "Stocks Fall on Final Trading Day of Grueling Quarter - The Wall Street Journal",
+            "description": "Bond yields and stocks fell ahead of the end of a grueling first half and as investors considered updated readings on consumer spending and inflation.",
+            "url": "https://www.wsj.com/articles/global-stocks-markets-dow-update-06-30-2022-11656487667-11656574533",
+            "urlToImage": "https://images.wsj.net/im-574469/social",
+            "publishedAt": "2022-06-30T16:03:00Z",
+            "content": "U.S. stocks retreated on the final day of a brutal quarter for markets, weighed down by losses among shares of everything from banks to oil producers.\r\nThe S&amp;P 500 fell 0.6%. The Dow Jones Indust… [+169 chars]"
+        },
+        {
+            "source": {
+                "id": "the-verge",
+                "name": "The Verge"
+            },
+            "author": "Russell Brandom",
+            "title": "Airlines are canceling more holiday flights due to staffing shortages - The Verge",
+            "description": "As many Americans make July Fourth travel plans, airlines are seeing an alarming surge in flight cancellations driven by pilot shortages.",
+            "url": "https://www.theverge.com/2022/6/30/23189456/airline-cancellation-holiday-flight-july4-airport",
+            "urlToImage": "https://cdn.vox-cdn.com/thumbor/CEeE5D96_ivbWU4P_jpL7ZobhH8=/0x116:1024x652/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/8847895/akrales170713_1851_0006.jpg",
+            "publishedAt": "2022-06-30T15:39:30Z",
+            "content": "We share the expectation that, when Americans buy an airline ticket, they will get where they need to go, says the Department of Transportation\r\nPhoto by Amelia Holowaty Krales / The Verge\r\nAhead of … [+2802 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "CNBC"
+            },
+            "author": "Spencer Kimball",
+            "title": "FDA backs changing Covid booster shots to target most recent omicron subvariants - CNBC",
+            "description": "Dr. Peter Marks, head of the FDA's vaccine division, said manufacturers should update their shots to target omicron BA.4 and BA.5.",
+            "url": "https://www.cnbc.com/2022/06/30/fda-backs-changing-covid-booster-shots-to-target-most-recent-omicron-subvariants.html",
+            "urlToImage": "https://image.cnbcfm.com/api/v1/image/107043016-gettyimages-1389964175-0j5a3210_c1ffdff8-7bc9-4f7c-9cf9-68b77dc43d8e.jpeg?v=1651056932&w=1920&h=1080",
+            "publishedAt": "2022-06-30T15:34:07Z",
+            "content": "The Food and Drug Administration on Thursday said vaccine manufacturers should update their Covid-19 booster shots to target the most recent omicron subvariants that are gaining ground in the U.S.\r\nD… [+4271 chars]"
+        },
+        {
+            "source": {
+                "id": "the-wall-street-journal",
+                "name": "The Wall Street Journal"
+            },
+            "author": "Gabriel T. Rubin",
+            "title": "Cooling Consumer Spending Points to Further Economic Slowdown - The Wall Street Journal",
+            "description": "Household spending in May rose at the slowest rate this year. Some economists see a second-straight quarterly contraction.",
+            "url": "https://www.wsj.com/articles/inflation-consumer-spending-personal-income-may-2022-11656531317",
+            "urlToImage": "https://images.wsj.net/im-573924/social",
+            "publishedAt": "2022-06-30T15:27:00Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Yahoo Entertainment"
+            },
+            "author": "Gabriella Cruz-Martinez",
+            "title": "The 30-year fixed rate mortgage decreased to 5.70% this week, down from 5.81% - Yahoo Finance",
+            "description": "Mortgage rates pulled back this week, a well-needed pause for price-stricken homebuyers.",
+            "url": "https://finance.yahoo.com/news/the-30-year-fixed-rate-mortgage-decreased-to-570-this-week-down-from-581-144759244.html",
+            "urlToImage": "https://s.yimg.com/ny/api/res/1.2/he33vz8d8cxA1PqJ_.8xCQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD03OTQ-/https://s.yimg.com/os/creatr-uploaded-images/2022-06/9402aac0-f6e1-11ec-babf-7af93ea50372",
+            "publishedAt": "2022-06-30T14:47:59Z",
+            "content": "Mortgage rates pulled back this week, a well-needed pause for price-stricken homebuyers.\r\nThe rate on the 30-year fixed mortgage retreated to 5.70% this week down from 5.81% the week prior, according… [+5933 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "MarketWatch"
+            },
+            "author": "Philip van Doorn",
+            "title": "These 10 stocks in the S&P 500 have lost $4.1 trillion of investors' money during the first half of 2022 - MarketWatch",
+            "description": "The biggest losers of shareholder value have included Apple, Amazon and Microsoft.",
+            "url": "https://www.marketwatch.com/story/these-10-stocks-in-the-s-p-500-have-lost-4-1-trillion-of-investors-money-during-the-first-half-of-2022-11656599467",
+            "urlToImage": "https://images.mktw.net/im-574582/social",
+            "publishedAt": "2022-06-30T14:31:00Z",
+            "content": "The first half of 2022 is over today, and good riddance for investors: The S&amp;P 500 Index has declined 21.4%. \r\nBelow are two lists of the worst-performing stocks in the S&amp;P 500 \r\n SPX,\r\n -0.3… [+3947 chars]"
+        },
+        {
+            "source": {
+                "id": "reuters",
+                "name": "Reuters"
+            },
+            "author": null,
+            "title": "Gazprom shares dive after dividend cancelled for first time since 1998 - Reuters.com",
+            "description": "Russian gas giant Gazprom <a href=\"https://www.reuters.com/companies/GAZP.MM\" target=\"_blank\">(GAZP.MM)</a> has decided not to pay dividends on last year's results, the first time it will not pay out since 1998, sending its shares plunging by nearly 30%.",
+            "url": "https://www.reuters.com/markets/europe/russias-gazprom-says-shareholders-decide-against-2021-dividend-2022-06-30/",
+            "urlToImage": "https://www.reuters.com/resizer/CDXJo7-xvgOfDDYWIHf3wgUkRlo=/1200x628/smart/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/ZB5WZEWBVVL6RB5EG4N2S5N44A.jpg",
+            "publishedAt": "2022-06-30T14:22:00Z",
+            "content": "MOSCOW, June 30 (Reuters) - Russian gas giant Gazprom (GAZP.MM) has decided not to pay dividends on last year's results, the first time it will not pay out since 1998, sending its shares plunging by … [+2397 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Fox Business"
+            },
+            "author": "Julia Musto",
+            "title": "US, Pfizer reach $3.2B COVID vaccine deal - Fox Business",
+            "description": "Partners Pfizer and BioNTech SE said they had signed a more than $3-billion-dollar agreement with the U.S. government for 105 million doses of their COVID vaccine.",
+            "url": "https://www.foxbusiness.com/markets/us-pfizer-reach-32b-covid-vaccine-deal",
+            "urlToImage": "https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2022/06/0/0/Pfizer-3.jpg?ve=1&tl=1",
+            "publishedAt": "2022-06-30T14:20:58Z",
+            "content": "Pfizer and BioNTech SE said Wednesday that they had inked a $3.2 billion agreement with the U.S. government for 105 million doses of their COVID-19 vaccine.\r\nThe deal includes new versions of the sho… [+3838 chars]"
+        },
+        {
+            "source": {
+                "id": "cnn",
+                "name": "CNN"
+            },
+            "author": "John Walton, CNN",
+            "title": "Why more air travel chaos is on its way - CNN",
+            "description": "Canceled flights, endless check in and security lines and maelstroms of lost luggage -- the summer of misery is set to continue for fliers, but there are ways around it.",
+            "url": "https://www.cnn.com/travel/article/air-travel-chaos-more-to-come/index.html",
+            "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/220629161120-04-more-air-travel-chaos-0629-orlando-super-tease.jpg",
+            "publishedAt": "2022-06-30T13:28:30Z",
+            "content": "(CNN) Now is the summer of our discontent, Shakespeare didn't exactly write in \"Richard III,\" but for airline travelers in the US and Europe that's exactly what this summer is shaping up to be. \r\nFli… [+9526 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "CNBC"
+            },
+            "author": "John Rosevear",
+            "title": "Nikola still short of shareholder support to issue new stock – hampered by founder Trevor Milton - CNBC",
+            "description": "The company has spent the past month rallying shareholders to vote for the proposal in sufficient numbers to overcome objections from founder Trevor Milton.",
+            "url": "https://www.cnbc.com/2022/06/30/nikola-shareholder-vote-to-issue-new-stock-seeks-to-outweigh-founder-trevor-milton.html",
+            "urlToImage": "https://image.cnbcfm.com/api/v1/image/106803569-1606748559549-2019-12-02T220643Z_1354007091_RC2AND9QB9CI_RTRMADP_3_CNH-INDUSTRIAL-NIKOLA.jpg?v=1606748646&w=1920&h=1080",
+            "publishedAt": "2022-06-30T13:26:24Z",
+            "content": "Electric truck startup Nikola is still short of clearing a shareholder hurdle to raise new funds, the company said Thursday hampered by the objections of its disgraced and now-departed founder.\r\nThe … [+3475 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "CNBC"
+            },
+            "author": "Bob Pisani",
+            "title": "The worst first half since 1970? It's not as bad as it looks. - CNBC",
+            "description": "Perspective on first six months this year shows stocks aren't necessarily all doom and gloom.",
+            "url": "https://www.cnbc.com/2022/06/30/the-worst-first-half-since-1970-its-not-as-bad-as-it-looks-.html",
+            "urlToImage": "https://image.cnbcfm.com/api/v1/image/107083192-16566037202022-06-30t153821z_1293067841_rc2e2v9p96dv_rtrmadp_0_usa-stocks.jpeg?v=1656603791&w=1920&h=1080",
+            "publishedAt": "2022-06-30T13:16:44Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "NBCSports.com"
+            },
+            "author": "Mike Florio",
+            "title": "Contractor owed money for scrapped Panthers practice facility fights bankruptcy facade - NBC Sports",
+            "description": "When news first surfaced that Panthers owner David Tepper had taken the shell company he formed to build his team’s new practice facility to bankruptcy, we expressed concern that he was playing a financial shell game with companies that provided services to t…",
+            "url": "https://profootballtalk.nbcsports.com/2022/06/30/contractor-owed-money-for-scrapped-panthers-practice-facility-fights-bankruptcy-facade/",
+            "urlToImage": "https://profootballtalk.nbcsports.com/wp-content/uploads/sites/25/2019/01/gettyimages-1034344694-e1547586595387.jpg",
+            "publishedAt": "2022-06-30T13:06:00Z",
+            "content": "When news first surfaced that Panthers owner David Tepper had taken the shell company he formed to build his teams new practice facility to bankruptcy, we expressed concern that he was playing a fina… [+2450 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "OilPrice.com"
+            },
+            "author": "Julianne Geiger",
+            "title": "Oil Prices Jump As OPEC Confirms 648,000 Bpd Production Hike - OilPrice.com",
+            "description": "The OPEC meeting ended in a relatively quick fashion on Thursday, agreeing to boost production by 648,000 bpd in August, according to Energy Intel's Chief OPEC Correspondent, Amena Bakr",
+            "url": "https://oilprice.com/Energy/Crude-Oil/Oil-Prices-Jump-As-OPEC-Confirms-648000-Bpd-Production-Hike.html",
+            "urlToImage": "https://d32r1sh890xpii.cloudfront.net/article/718x300/2022-06-30_rw3d7ot0qz.jpg",
+            "publishedAt": "2022-06-30T13:00:00Z",
+            "content": "The U.S. national average price…\r\nThe current high price environment…\r\nThe number of completed wells…\r\nBy Julianne Geiger - Jun 30, 2022, 8:00 AM CDTThe OPEC+ meeting ended in a relatively quick fash… [+1787 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Kitco NEWS"
+            },
+            "author": "http://www.facebook.com/kitconews",
+            "title": "Gold price rallies after stable U.S. inflation reading - Kitco NEWS",
+            "description": "(Kitco News) - Gold and silver prices are a lower in early U.S. trading Thursday, with gold dropping to a six-week low and silver a two-year low.",
+            "url": "https://www.kitco.com/news/2022-06-30/Price-declines-in-gold-silver-amid-bearish-outside-markets-demand-worries.html",
+            "urlToImage": "https://www.kitco.com/images/live/gold.gif?0.2924175530478188",
+            "publishedAt": "2022-06-30T12:33:00Z",
+            "content": "Editor's Note: With so much market volatility, stay on top of daily news! Get caught up in minutes with our speedy summary of today's must-read news and expert opinions. Sign up here! \r\n(Kitco News) … [+3691 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Endpoints News"
+            },
+            "author": "John Carroll",
+            "title": "Breaking: FDA sidelines Paul Hudson's $3.7B MS drug after establishing link to liver damage - Endpoints News",
+            "description": "One of Sanofi CEO Paul Hudson's top picks in the pipeline — picked up in a $3.7 billion buyout 2 years ago — has just been sidelined in the US by a safety issue. The pharma giant put out word early Thursday that the FDA has put their Phase III",
+            "url": "https://endpts.com/breaking-fda-sidelines-paul-hudsons-3-7b-ms-drug-after-establishing-link-to-liver-damage/",
+            "urlToImage": "https://endpts.com/wp-content/uploads/2021/09/Paul-Hudson-Getty-1-scaled.jpg",
+            "publishedAt": "2022-06-30T12:22:44Z",
+            "content": "We now know the number of jobs coming under the axe at Novartis, and it isn’t small.\r\nThe pharma giant is confirming a report from Swiss newspaper Tages-Anzeiger that it is chopping 8,000 jobs out of… [+490 chars]"
+        },
+        {
+            "source": {
+                "id": "cnn",
+                "name": "CNN"
+            },
+            "author": "Jordan Valinsky, CNN Business",
+            "title": "RadioShack's NSFW Twitter account, explained - CNN",
+            "description": "Clearly, this isn't your father's RadioShack.",
+            "url": "https://www.cnn.com/2022/06/30/business/radioshack-twitter-account-crypto/index.html",
+            "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/220630075552-radioshack-file-super-tease.jpg",
+            "publishedAt": "2022-06-30T12:22:00Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": "business-insider",
+                "name": "Business Insider"
+            },
+            "author": "Stephen Jones",
+            "title": "One of the world's busiest airports has cancelled flights because it expects more passengers to turn up than it can safely handle - Yahoo! Voices",
+            "description": "\"We are expecting higher passenger numbers in today's morning peak than the airport currently has capacity to serve,\" a Heathrow spokesperson said.",
+            "url": "https://www.businessinsider.com/heathrow-airport-cancels-flights-airlines-too-many-passengers-2022-6",
+            "urlToImage": "https://s.yimg.com/ny/api/res/1.2/5IO9i3x7tYa2Tw6TVlIYwA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD05MDA-/https://s.yimg.com/uu/api/res/1.2/aWb3zESsFP32wBTe6NgWPQ--~B/aD01NTg4O3c9NzQ1MDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/business_insider_articles_888/5b59a58c719dab8fc864bd3d73b07754",
+            "publishedAt": "2022-06-30T12:14:06Z",
+            "content": "Passenger lines at Heathrow in early June. The global airline industry struggles to cope with summer travel demand.Carl Court/Getty Images.\r\n<ul><li>Heathrow airport asked airlines to cancel flights … [+3025 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "MarketWatch"
+            },
+            "author": "Jeffry Bartash",
+            "title": "Raging U.S. inflation is starting to cool, key price gauge signals - MarketWatch",
+            "description": "The core rate of PCE inflation slows again",
+            "url": "https://www.marketwatch.com/story/coming-up-pce-inflation-and-consumer-spending-11656591128",
+            "urlToImage": "https://images.mktw.net/im-568043/social",
+            "publishedAt": "2022-06-30T12:12:00Z",
+            "content": "The numbers: A key gauge of U.S. inflation rose 0.6% in May largely due to the higher cost of gas and food, but there were renewed signs that price pressures were starting to ease.The increase in the… [+2271 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "DW (English)"
+            },
+            "author": "Deutsche Welle (www.dw.com)",
+            "title": "Are we seeing a breakthrough for electric cars in the EU? | DW | 30.06.2022 - DW (English)",
+            "description": "It looks like the EU is witnessing a big victory for e-mobility as member countries have agreed in principle that new cars can no longer have combustion engines after 2035. But there are a number of risks involved.",
+            "url": "https://www.dw.com/en/are-we-seeing-a-breakthrough-for-electric-cars-in-the-eu/a-62310995",
+            "urlToImage": "https://static.dw.com/image/56354787_6.jpg",
+            "publishedAt": "2022-06-30T12:02:08Z",
+            "content": "There seems to be no future for combustion engines in the European Union anymore. Come 2035, new passenger cars and vans may only be sold if they are climate-neutral, that is if they don't emit any C… [+5691 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "New York Times"
+            },
+            "author": "Peter Eavis, Lauren Hirsch",
+            "title": "Spirit Calls Off Vote on Frontier Bid as Talks with JetBlue Continue - The New York Times",
+            "description": "Spirit Airlines said it would continue to talk with both suitors, putting off a shareholder vote until July 8.",
+            "url": "https://www.nytimes.com/2022/06/29/business/spirit-frontier-airlines-jetblue.html",
+            "urlToImage": "https://static01.nyt.com/images/2022/06/30/business/30economy-briefing-SpiritMerger/30economy-briefing-SpiritMerger-facebookJumbo.jpg",
+            "publishedAt": "2022-06-30T11:50:00Z",
+            "content": "Frontiers chief executive, Barry Biffle, was a top Spirit executive from 2005 to 2013. William A. Franke, the chairman of Frontier, is also a managing partner of Indigo Partners. the private equity f… [+1591 chars]"
+        }
+    ]
+}

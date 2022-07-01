@@ -9,10 +9,13 @@ target 'SampleCTApp' do
 
   pod 'ReachabilitySwift'
   pod 'SwiftLint'
+  pod 'Kingfisher'
+  pod 'DropDown'
 
   target 'SampleCTAppTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'DropDown'
   end
 
   target 'SampleCTAppUITests' do

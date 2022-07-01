@@ -7,11 +7,13 @@
 //
 
 import XCTest
+import DropDown
 @testable import SampleCTApp
 
 class SampleCTAppUITests: XCTestCase {
 
     private var app: XCUIApplication!
+    private var dropDown = DropDown()
    // private var contentViewPage: ContentViewPage!
     var timer: Timer!
     
@@ -40,13 +42,35 @@ class SampleCTAppUITests: XCTestCase {
         app.launch()
     }
     
-    func testTableCount() {
-        let app = XCUIApplication()
-        XCTAssertEqual(app.tables.count, 1)
-        let table = app.tables.element(boundBy: 0)
-        XCTAssertEqual(table.cells.count, 80)
+    func testArticleListNotLoaded() {
+        let searchButton = app.staticTexts["Search"]
+        let waitExpectation = expectation(description: "Waiting")
+        XCTAssertTrue(searchButton.isHittable, "Search Button is Hittable")
+        searchButton.tap()
+        waitExpectation.fulfill()
+        waitForExpectations(timeout: 5.0)
+        let tableCell = app.tables.children(matching: .cell).element(boundBy: 0).staticTexts["TitleName"]
+        XCTAssertFalse(tableCell.exists, "Table list not loaded")
     }
-
+    
+    func testArticleListisLoaded(){
+        
+        let searchButton =  app.buttons["Search"].staticTexts["Search"]
+        let waitExpectation = expectation(description: "Waiting")
+        XCTAssertTrue(searchButton.isHittable, "Search Button is Hittable")
+        app.buttons["dropButton"].tap()
+        dropDown.hide()
+        searchButton.tap()
+        waitExpectation.fulfill()
+        waitForExpectations(timeout: 60)
+        let tableCell = app.tables.children(matching: .cell).element(boundBy: 0).staticTexts["TitleName"]
+        XCTAssertTrue(tableCell.exists, "Table list loaded")
+        XCTAssert(app.tables.staticTexts.count > 0)
+        if (app.tables.element(boundBy: 0).cells.count > 0) {
+            app.tables.element(boundBy: 0).cells.element(boundBy: 0).tap()
+        }
+    }
+    
     func testExample() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
@@ -59,9 +83,9 @@ class SampleCTAppUITests: XCTestCase {
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
             // This measures how long it takes to launch your application.
-            measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
-                XCUIApplication().launch()
-            }
+//            measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
+//                XCUIApplication().launch()
+//            }
         }
     }
 }

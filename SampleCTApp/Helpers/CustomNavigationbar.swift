@@ -13,9 +13,11 @@ class CustomNavBar {
     
     static func setup() {
         
-        UINavigationBar.appearance().barTintColor = UIColor(red: 0.188, green: 0.243, blue: 0.306, alpha: 1.00)
+        UINavigationBar.appearance().topItem?.title = "NEWS"
+        UINavigationBar.appearance().barTintColor = UIColor(red: 59/255, green: 128/255, blue: 167/255, alpha: 1.00)
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-    }
+      
+            }
     
 }

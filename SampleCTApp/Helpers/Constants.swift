@@ -11,32 +11,27 @@ import UIKit
 
 struct Constants {
     
-    static let apikey = "d9435b3ac8e1464ea4b9e800a22680ca"
+    static let apikey = "421419166c2b44948928a01863246623"
+    static let defaultURL = "https://edition.cnn.com"
+    static let country = "in"
+    static let dropDownTitle = "Select your Category"
+    static let searchTitle = "Search"
     
     struct Network {
         static let errorMessage = "Please check your internet connection and try again"
         static let errorTitle = "No internet connection"
+        static let errorText = "Error"
     }
-    
+    struct Category {
+        static let Business = "Business"
+        static let Sports = "Sports"
+        static let Entertainment = "Entertainment"
+        static let General = "General"
+    }
     struct ShowAlert {
-        static let enterCityName = "Please enter city name"
+        static let selectCategory = "Please select your category"
         static let okTitle = "OK"
         static let alertTitle = "Alert!"
-    }
-    static func readJSONFromFile(fileName: String) -> Any? {
-        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
-            if let data = NSData(contentsOf: url) {
-                do {
-                    let dictionary = try JSONSerialization.jsonObject(with: data as Data, options: .allowFragments) as? NSDictionary
-                    
-                    return dictionary
-                } catch {
-                    print("Error!! Unable to parse  \(fileName).json")
-                }
-            }
-            print("Error!! Unable to load  \(fileName).json")
-        }
-        return nil
     }
     
     static func isCydiaAppInstalled() -> Bool {
@@ -50,20 +45,6 @@ struct Constants {
         } catch {
             return false
         }
-    }
-    static func loadJson(filename fileName: String) -> [String: AnyObject]? {
-        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: url)
-                let object = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-                if let dictionary = object as? [String: AnyObject] {
-                    return dictionary
-                }
-            } catch {
-                print("Error!! Unable to parse  \(fileName).json")
-            }
-        }
-        return nil
     }
 }
 

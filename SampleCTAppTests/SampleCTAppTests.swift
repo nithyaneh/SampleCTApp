@@ -11,82 +11,137 @@ import XCTest
 
 class SampleCTAppTests: XCTestCase {
     
-    private var articleListViewModel: ArticleViewModel?
-    private var article: Article?
-    private var articleArray: [Article] = []
+    private var articleListViewModelTest: ArticleDataViewModel!
+    private var storyboard: UIStoryboard!
     private var sourceData: NewsSourcesResponse?
-    private var filename: String?
-    private var data: Data?
+    var data: Data?
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test
         // articleListViewModel = ArticleViewModel(article: )
-        let currentOperator = "Business"
-        switch currentOperator {
-        case "Business":
-            filename = "News_Business"
-        case "Sports":
-            filename = "News_Sports"
-        case "Entertainment":
-            filename = "News_Entertainment"
-        case "General":
-            filename = "News_General"
-        default:
-            break
-        }
-        guard let fileData = filename else {
-            return
-        }
-        data = try getData(fromJSON: fileData)
-        guard let jsonData = data else {
-            return
-        }
-        sourceData = try JSONDecoder().decode(NewsSourcesResponse.self, from: jsonData)
-        articleArray = try JSONDecoder().decode(NewsSourcesResponse.self, from: jsonData).articles
         
     }
     
-    func testMockForArtistViewModel() {
-        for article in articleArray {
-            
-            let articleViewModel = ArticleViewModel(article: article)
-            XCTAssert(articleArray.count > 0, "Data not received")
-            XCTAssert(articleArray.count == 20 , "All articles are not loaded properly")
-            XCTAssertNotNil(articleViewModel, "The article view model should not be nil.")
-            XCTAssertNotNil(article.title, "The title should not be nil")
-            XCTAssertNotNil(article.sourceName, "The sourcename should not be nil")
-            
-            guard let jsonData = data else {
-                return
-            }
-            XCTAssertNoThrow(try JSONDecoder().decode(NewsSourcesResponse.self, from: jsonData))
+    
+    override func setUp() async throws {
+        articleListViewModelTest = ArticleDataViewModel(articleViewProtocol: Webservice())
+    }
+    
+    func testForSportsCategorySuccess() {
+        let expect = expectation(description: "API success")
+        Task {
+            await articleListViewModelTest.getData(category:Constants.Category.Sports)
+            expect.fulfill()
+        }
+        waitForExpectations(timeout: 20)
+        guard let artitlceCount = articleListViewModelTest.articles?.count else {return}
+        XCTAssertTrue(artitlceCount > 0, "Data is loaded properly")
+        for article in articleListViewModelTest.articles! {
+            XCTAssertNotNil(article.title, "article data is not nil")
+            XCTAssertNotNil(article.sourceName, "source name is not nil")
         }
     }
-
-override func tearDownWithError() throws {
-    article = nil
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-}
-
-func testExample() throws {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
-
-func testPerformanceExample() throws {
-    // This is an example of a performance test case.
-    measure {
-        // Put the code you want to measure the time of here.
+    func testForBusinessCategorySuccess() {
+        let expect = expectation(description: "API success")
+        
+        Task {
+            await articleListViewModelTest.getData(category:Constants.Category.Business)
+            expect.fulfill()
+        }
+        waitForExpectations(timeout: 20)
+        guard let artitlceCount = articleListViewModelTest.articles?.count else {return}
+        XCTAssertTrue(artitlceCount > 0, "Data is loaded properly")
+        for article in articleListViewModelTest.articles! {
+            XCTAssertNotNil(article.title, "article data is not nil")
+            XCTAssertNotNil(article.sourceName, "source name is not nil")
+        }
     }
-}
-
+    func testForEntertainmentCategorySuccess() {
+        let expect = expectation(description: "API success")
+        
+        Task {
+            await articleListViewModelTest.getData(category:Constants.Category.Entertainment)
+            expect.fulfill()
+        }
+        waitForExpectations(timeout: 20)
+        guard let artitlceCount = articleListViewModelTest.articles?.count else {return}
+        XCTAssertTrue(artitlceCount > 0, "Data is loaded properly")
+        for article in articleListViewModelTest.articles! {
+            XCTAssertNotNil(article.title, "article data is not nil")
+            XCTAssertNotNil(article.sourceName, "source name is not nil")
+        }
+    }
+    func testForGeneralCategorySuccess() {
+        let expect = expectation(description: "API success")
+        
+        Task {
+            await articleListViewModelTest.getData(category:Constants.Category.General)
+            expect.fulfill()
+        }
+        waitForExpectations(timeout: 20)
+        guard let artitlceCount = articleListViewModelTest.articles?.count else {return}
+        XCTAssertTrue(artitlceCount > 0, "Data is loaded properly")
+        for article in articleListViewModelTest.articles! {
+            XCTAssertNotNil(article.title, "article data is not nil")
+            XCTAssertNotNil(article.sourceName, "source name is not nil")
+        }
+    }
+    
+    func testForAPIWithEmptyCategoryFailure() {
+        let expect = expectation(description: "API Empty Result")
+        Task {
+            await articleListViewModelTest.getData(category:"")
+            expect.fulfill()
+        }
+        waitForExpectations(timeout: 20)
+        guard let artitlceCount = articleListViewModelTest.articles?.count else {return}
+        XCTAssertFalse(artitlceCount > 0, "Invalid country Data error")
+    }
+    
+    func testForMockDataSuccess() throws {
+        let expectation = expectation(description: "Success")
+        sourceData = try getData(fromJSON: "Business_US")
+        guard let artitlceCount = sourceData?.articles.count else {return}
+        XCTAssertTrue(artitlceCount > 0, "Mock Data working")
+        if let articles = sourceData?.articles {
+            for article in articles {
+                XCTAssertNotNil(article.title, "article data is not nil")
+                XCTAssertNotNil(article.sourceName, "source name is not nil")
+            }
+        }
+        expectation.fulfill()
+        waitForExpectations(timeout: 20)
+    }
+    
+    override func tearDownWithError() throws {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
+    
+    func testExample() throws {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    
+    func testPerformanceExample() throws {
+        // This is an example of a performance test case.
+        measure {
+            // Put the code you want to measure the time of here.
+        }
+    }
+    override func tearDown() {
+        articleListViewModelTest = nil
+        storyboard = nil
+    }
+    
+    
 }
 extension XCTestCase {
     enum TestError: Error {
         case fileNotFound
+        case dataNotFound
     }
     
-    func getData(fromJSON fileName: String) throws -> Data {
+    func getData(fromJSON fileName: String) throws -> NewsSourcesResponse? {
         let bundle = Bundle(for: type(of: self))
         guard let url = bundle.url(forResource: fileName, withExtension: "json") else {
             XCTFail("Missing File: \(fileName).json")
@@ -94,9 +149,10 @@ extension XCTestCase {
         }
         do {
             let data = try Data(contentsOf: url)
-            return data
+            let sourceData: NewsSourcesResponse = try JSONDecoder().decode(NewsSourcesResponse.self, from: data)
+            return sourceData
         } catch {
-            throw error
+            throw TestError.dataNotFound
         }
     }
 }

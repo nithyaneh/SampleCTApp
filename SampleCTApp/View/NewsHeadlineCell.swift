@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class NewsHeadlineCell: UITableViewCell {
     
@@ -25,17 +26,36 @@ class NewsHeadlineCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        self.headlineImgView.image = nil
-       
+        self.headlineImgView.image = UIImage(named: "errorImage")
     }
 
 }
 
 extension NewsHeadlineCell {
     
-    func configure(vm: ArticleViewModel) {
-        self.titleLbl.text = vm.title
-        self.descriptionLbl.text = vm.description
-        vm.image { self.headlineImgView.image = $0 }
+    func loadArticlesData(articleResults: Article) {
+        titleLbl.text =  articleResults.sourceName
+        descriptionLbl.text =  articleResults.title
+        guard let imageURL = articleResults.imageURL else {
+            return
+        }
+        if imageURL.isValidURL {
+            let loadingURLImage = URL(string: imageURL)
+            headlineImgView.kf.indicatorType = .activity
+            headlineImgView.kf.setImage(with: loadingURLImage)
+        }
+        
+}
+}
+
+extension String {
+    var isValidURL: Bool {
+        let detector = try! NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
+        if let match = detector.firstMatch(in: self, options: [], range: NSRange(location: 0, length: self.utf16.count)) {
+            // it is a link, if the match covers the whole string
+            return match.range.length == self.utf16.count
+        } else {
+            return false
+        }
     }
 }

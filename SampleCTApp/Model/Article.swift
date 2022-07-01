@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct NewsSourcesResponse: Decodable {
+struct NewsSourcesResponse: Codable {
     let articles: [Article]
 }
 
-struct Article: Decodable {
+struct Article: Codable {
     
     let title: String
     let description: String?
@@ -41,13 +41,5 @@ struct Article: Decodable {
         
         let sourceContainer = try container.nestedContainer(keyedBy: SourceKeys.self, forKey: .source)
         self.sourceName = try sourceContainer.decode(String.self, forKey: .name)
-    }
-}
-
-extension Article {
-    static func by(_ category: String) -> Resource<[Article]> {
-return Resource<[Article]>(url: URL.urlForTopHeadlines(for: category)) { data in
-            return try! JSONDecoder().decode(NewsSourcesResponse.self, from: data).articles
-        }
     }
 }
