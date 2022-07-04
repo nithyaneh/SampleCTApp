@@ -7,16 +7,14 @@
 //
 
 import XCTest
-import DropDown
 @testable import SampleCTApp
 
 class SampleCTAppUITests: XCTestCase {
 
     private var app: XCUIApplication!
-    private var dropDown = DropDown()
    // private var contentViewPage: ContentViewPage!
     var timer: Timer!
-    
+
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
@@ -43,8 +41,8 @@ class SampleCTAppUITests: XCTestCase {
     }
     
     func testArticleListNotLoaded() {
-        let searchButton = app.staticTexts["Search"]
         let waitExpectation = expectation(description: "Waiting")
+        let searchButton = app.staticTexts["searchBtn"]
         XCTAssertTrue(searchButton.isHittable, "Search Button is Hittable")
         searchButton.tap()
         waitExpectation.fulfill()
@@ -53,16 +51,87 @@ class SampleCTAppUITests: XCTestCase {
         XCTAssertFalse(tableCell.exists, "Table list not loaded")
     }
     
-    func testArticleListisLoaded(){
-        
-        let searchButton =  app.buttons["Search"].staticTexts["Search"]
+    func testArticleListisLoadedForBusinessCategory() {
         let waitExpectation = expectation(description: "Waiting")
-        XCTAssertTrue(searchButton.isHittable, "Search Button is Hittable")
-        //app.buttons["dropButton"].tap()
+        app.textFields["categoryTextField"].tap()
+        app.textFields["categoryTextField"].typeText("Business") 
+        let searchButton = app.staticTexts["searchBtn"]
         searchButton.tap()
         waitExpectation.fulfill()
-        waitForExpectations(timeout: 60)
+        waitForExpectations(timeout: 5)
+        XCTAssert(app.navigationBars["News"].exists)
         let tableCell = app.tables.children(matching: .cell).element(boundBy: 0).staticTexts["TitleName"]
+        WaitExpectation().waitForElement(element: tableCell, toShow: true, needToTap: false, assertMessage: nil)
+        XCTAssertTrue(tableCell.exists, "Table list loaded")
+        XCTAssert(app.tables.staticTexts.count > 0)
+        if (app.tables.element(boundBy: 0).cells.count > 0) {
+            app.tables.element(boundBy: 0).cells.element(boundBy: 0).tap()
+        }
+    }
+    func testArticleListisLoadedForSportsCategory() {
+        let waitExpectation = expectation(description: "Waiting")
+        app.textFields["categoryTextField"].tap()
+        app.textFields["categoryTextField"].typeText("Sports") // Checking with correct city name
+        let searchButton = app.staticTexts["searchBtn"]
+        searchButton.tap()
+        waitExpectation.fulfill()
+        waitForExpectations(timeout: 5)
+        XCTAssert(app.navigationBars["News"].exists)
+        let tableCell = app.tables.children(matching: .cell).element(boundBy: 0).staticTexts["TitleName"]
+        WaitExpectation().waitForElement(element: tableCell, toShow: true, needToTap: false, assertMessage: nil)
+        XCTAssertTrue(tableCell.exists, "Table list loaded")
+        XCTAssert(app.tables.staticTexts.count > 0)
+        if (app.tables.element(boundBy: 0).cells.count > 0) {
+            app.tables.element(boundBy: 0).cells.element(boundBy: 0).tap()
+        }
+    }
+    func testArticleListisLoadedForSEntertainmentCategory() {
+        let waitExpectation = expectation(description: "Waiting")
+        app.textFields["categoryTextField"].tap()
+        app.textFields["categoryTextField"].typeText("Entertainment")
+        let searchButton = app.staticTexts["searchBtn"]
+        searchButton.tap()
+        waitExpectation.fulfill()
+        waitForExpectations(timeout: 5)
+        XCTAssert(app.navigationBars["News"].exists)
+        let tableCell = app.tables.children(matching: .cell).element(boundBy: 0).staticTexts["TitleName"]
+        WaitExpectation().waitForElement(element: tableCell, toShow: true, needToTap: false, assertMessage: nil)
+        XCTAssertTrue(tableCell.exists, "Table list loaded")
+        XCTAssert(app.tables.staticTexts.count > 0)
+        if (app.tables.element(boundBy: 0).cells.count > 0) {
+            app.tables.element(boundBy: 0).cells.element(boundBy: 0).tap()
+        }
+    }
+    
+    func testArticleListisLoadedForHealthCategory() {
+        let waitExpectation = expectation(description: "Waiting")
+        app.textFields["categoryTextField"].tap()
+        app.textFields["categoryTextField"].typeText("Health")
+        let searchButton = app.staticTexts["searchBtn"]
+        searchButton.tap()
+        waitExpectation.fulfill()
+        waitForExpectations(timeout: 5)
+        XCTAssert(app.navigationBars["News"].exists)
+        let tableCell = app.tables.children(matching: .cell).element(boundBy: 0).staticTexts["TitleName"]
+        WaitExpectation().waitForElement(element: tableCell, toShow: true, needToTap: false, assertMessage: nil)
+        XCTAssertTrue(tableCell.exists, "Table list loaded")
+        XCTAssert(app.tables.staticTexts.count > 0)
+        if (app.tables.element(boundBy: 0).cells.count > 0) {
+            app.tables.element(boundBy: 0).cells.element(boundBy: 0).tap()
+        }
+    }
+    
+    func testArticleListisLoadedForGeneralCategory() {
+        let waitExpectation = expectation(description: "Waiting")
+        app.textFields["categoryTextField"].tap()
+        app.textFields["categoryTextField"].typeText("General") 
+        let searchButton = app.staticTexts["searchBtn"]
+        searchButton.tap()
+        waitExpectation.fulfill()
+        waitForExpectations(timeout: 5)
+        XCTAssert(app.navigationBars["News"].exists)
+        let tableCell = app.tables.children(matching: .cell).element(boundBy: 0).staticTexts["TitleName"]
+        WaitExpectation().waitForElement(element: tableCell, toShow: true, needToTap: false, assertMessage: nil)
         XCTAssertTrue(tableCell.exists, "Table list loaded")
         XCTAssert(app.tables.staticTexts.count > 0)
         if (app.tables.element(boundBy: 0).cells.count > 0) {

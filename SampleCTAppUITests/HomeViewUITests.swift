@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import DropDown
 
 @testable import SampleCTApp
 
@@ -41,43 +40,30 @@ class HomeViewUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
-    func testSearchNavigation() {
-       // app.launch()
+    func testSearchHittable() {
         let waitExpectation = expectation(description: "Waiting")
-        XCTAssert(app.buttons["Search"].exists)
-        app.buttons["search"].tap()
+        let searchButton = app.staticTexts["searchBtn"]
+        XCTAssert(app.staticTexts["searchBtn"].exists)
+        searchButton.tap()
         waitExpectation.fulfill()
         waitForExpectations(timeout: 5.0)
+        let alert = app.alerts["Alert!"].scrollViews.otherElements
+        let alertTitle = alert.staticTexts["Please type your category and search"]
+        WaitExpectation().waitForElement(element: alertTitle, toShow: true, needToTap: false)
+        XCTAssertTrue(alertTitle.exists, "no data alert shown")
+        alert.buttons["OK"].tap()
+    }
+    
+    func testSearchNavigation() {
+        let waitExpectation = expectation(description: "Waiting")
+        app.textFields["categoryTextField"].tap()
+        app.textFields["categoryTextField"].typeText("Business") 
+        let searchButton = app.staticTexts["searchBtn"]
+        searchButton.tap()
+        waitExpectation.fulfill()
+        waitForExpectations(timeout: 5)
         XCTAssert(app.navigationBars["News"].exists)
     }
-    func testSearchNotHittable() {
-       // app.launch()
-        let waitExpectation = expectation(description: "Waiting")
-        XCTAssert(app.buttons["search"].exists)
-        XCTAssertEqual(app.staticTexts["dropdown"].label, "Select your Category")
-        app.buttons["dropButton"].tap()
-        waitExpectation.fulfill()
-        waitForExpectations(timeout: 5.0)
-        XCTAssertFalse(app.buttons["search"].isHittable, "Should not be hittable")
-    }
-
-    func testCategoryLabel() {
-        let waitExpectation = expectation(description: "Waiting")
-        XCTAssert(app.staticTexts["dropdown"].exists)
-        let catLabel = app.staticTexts["dropdown"].label
-        XCTAssertEqual(catLabel, "Select your Category")
-        waitExpectation.fulfill()
-        waitForExpectations(timeout: 2.0)
-    }
-    func testDropButton() {
-        //app.launch()
-        let waitExpectation = expectation(description: "Waiting")
-        XCTAssert(app.buttons["dropButton"].exists)
-        app.buttons["dropButton"].tap()
-        waitExpectation.fulfill()
-        waitForExpectations(timeout: 2.0)
-    }
-
     
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {

@@ -14,7 +14,6 @@ struct Constants {
     static let apikey = "421419166c2b44948928a01863246623"
     static let defaultURL = "https://edition.cnn.com"
     static let country = "in"
-    static let dropDownTitle = "Select your Category"
     static let searchTitle = "Search"
     
     struct Network {
@@ -27,9 +26,10 @@ struct Constants {
         static let Sports = "Sports"
         static let Entertainment = "Entertainment"
         static let General = "General"
+        static let Health = "Health"
     }
     struct ShowAlert {
-        static let selectCategory = "Please select your category"
+        static let selectCategory = "Please type your category and search"
         static let okTitle = "OK"
         static let alertTitle = "Alert!"
     }

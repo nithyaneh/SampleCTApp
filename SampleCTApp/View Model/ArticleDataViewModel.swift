@@ -47,6 +47,10 @@ class ArticleDataViewModel: ArticleDataViewProtocol {
     //Load news articles with response
     func getData(category: String) async {
         
+        if (category.isEmpty) {
+            return
+        }
+        
         let resultResp = await articleViewProtocol.sendRequest(endpoint: CategoryEndpoint.categoryCountry(category: category), responseModel: NewsSourcesResponse.self)
         switch resultResp {
         case .success(let response):

@@ -34,6 +34,9 @@ class NewsFeedTableViewController: UITableViewController {
     
     private func loadNewsDataWithTableView() {
            
+        if (categoryTitle.isEmpty){
+            return
+        }
         Task { [weak self] in
                 await self?.newsDataViewModel.getData(category: categoryTitle)
             }

@@ -100,7 +100,7 @@ class SampleCTAppTests: XCTestCase {
     
     func testForMockDataSuccess() throws {
         let expectation = expectation(description: "Success")
-        sourceData = try getData(fromJSON: "Business_US")
+        sourceData = try getData(fromJSON: "Business_in")
         guard let artitlceCount = sourceData?.articles.count else {return}
         XCTAssertTrue(artitlceCount > 0, "Mock Data working")
         if let articles = sourceData?.articles {

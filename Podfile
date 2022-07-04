@@ -10,7 +10,6 @@ target 'SampleCTApp' do
   pod 'ReachabilitySwift'
   pod 'SwiftLint'
   pod 'Kingfisher'
-  pod 'DropDown'
 
   target 'SampleCTAppTests' do
     inherit! :search_paths

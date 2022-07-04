@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import DropDown
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         CustomNavBar.setup()
         let isJailBroken = Constants.canEditSandboxFilesForJailBreakDetecttion()
         print(isJailBroken)
-        DropDown.startListeningToKeyboard()
         return true
     }
     

@@ -1,4 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-SampleCTApp/Pods-SampleCTApp-frameworks.sh
-${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework
 ${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
 ${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework

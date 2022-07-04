@@ -9,20 +9,6 @@
 import UIKit
 
 extension UIView {
-    static func viewForTableViewHeader(subtitle: String) -> UIView {
-        let screenRect = UIScreen.main.bounds
-        
-        let subTitleView = UIView(frame: CGRect(origin: .zero, size: CGSize(width: screenRect.size.width, height: 44)))
-        let subTitleLbl = UILabel(frame: CGRect(origin: .zero, size: CGSize(width: screenRect.width, height: 44)))
-        
-        subTitleLbl.text = subtitle
-        subTitleLbl.textAlignment = .center
-        subTitleLbl.textColor = .gray
-        
-        subTitleView.addSubview(subTitleLbl)
-        return subTitleView
-    }
-
     
     static func viewForSectionHeader(title: String) -> UIView {
         let screenRect = UIScreen.main.bounds
