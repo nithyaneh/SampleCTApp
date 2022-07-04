@@ -10,8 +10,8 @@
 
 # 3rd Party Libraries
 
-   ReachabilitySwift
-   SwiftLint
+   ReachabilitySwift,
+   SwiftLint,
    Kingfisher
   
 # Tech
