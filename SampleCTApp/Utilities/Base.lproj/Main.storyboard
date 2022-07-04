@@ -159,7 +159,7 @@
                             <outlet property="delegate" destination="k09-2c-eTO" id="1B2-x2-gti"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="India Today" id="WbV-zA-7Ya"/>
+                    <navigationItem key="navigationItem" title="INDIA TODAY" id="WbV-zA-7Ya"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w68-TJ-x03" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

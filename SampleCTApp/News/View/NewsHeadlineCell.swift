@@ -13,9 +13,9 @@ class NewsHeadlineCell: UITableViewCell {
     
     // MARK: - Properties
     
-    @IBOutlet weak var titleLbl: UILabel!
-    @IBOutlet weak var descriptionLbl: UILabel!
-    @IBOutlet weak var headlineImgView: UIImageView!
+    @IBOutlet weak private var titleLbl: UILabel!
+    @IBOutlet weak private var descriptionLbl: UILabel!
+    @IBOutlet weak private var headlineImgView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
