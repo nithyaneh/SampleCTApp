@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home Controller-->
+        <!--NEWS-->
         <scene sceneID="3Ff-wv-NPr">
             <objects>
                 <viewController id="OVn-DN-iqf" customClass="HomeController" customModule="SampleCTApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -85,7 +85,7 @@
                             <constraint firstItem="d2s-Bq-kQo" firstAttribute="centerY" secondItem="hlc-W5-b7x" secondAttribute="centerY" constant="-50" id="eWk-vm-Dqi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Tat-4J-3GT"/>
+                    <navigationItem key="navigationItem" title="NEWS" id="Tat-4J-3GT"/>
                     <connections>
                         <outlet property="categoryListView" destination="Sgg-JR-CyJ" id="Eoi-1P-YrF"/>
                         <outlet property="categoryTextField" destination="0es-hV-mgM" id="dSy-0E-jeq"/>
@@ -93,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fdF-7R-ULM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1830" y="-163"/>
+            <point key="canvasLocation" x="1865" y="-382"/>
         </scene>
         <!--NewsVC-->
         <scene sceneID="hr7-Ht-wyh">
@@ -159,11 +159,11 @@
                             <outlet property="delegate" destination="k09-2c-eTO" id="1B2-x2-gti"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="News" id="WbV-zA-7Ya"/>
+                    <navigationItem key="navigationItem" title="India Today" id="WbV-zA-7Ya"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w68-TJ-x03" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2028" y="-449"/>
+            <point key="canvasLocation" x="2581" y="-382"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gfJ-LB-0Xu">

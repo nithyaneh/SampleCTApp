@@ -14,7 +14,6 @@ target 'SampleCTApp' do
   target 'SampleCTAppTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'DropDown'
   end
 
   target 'SampleCTAppUITests' do

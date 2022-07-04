@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		181A1A57286EE9BC0049963F /* HomeViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181A1A56286EE9BC0049963F /* HomeViewUITests.swift */; };
+		1815EE082872B866000F0100 /* Sports_in.json in Resources */ = {isa = PBXBuildFile; fileRef = 1875D5DD286F605D002C323D /* Sports_in.json */; };
+		1815EE092872B869000F0100 /* Health_in.json in Resources */ = {isa = PBXBuildFile; fileRef = 1815EE062872B12E000F0100 /* Health_in.json */; };
+		1815EE0A2872B86C000F0100 /* Entertainment_in.json in Resources */ = {isa = PBXBuildFile; fileRef = 1875D5DC286F605D002C323D /* Entertainment_in.json */; };
+		1815EE0B2872B872000F0100 /* General_in.json in Resources */ = {isa = PBXBuildFile; fileRef = 1875D5DE286F605D002C323D /* General_in.json */; };
+		1815EE0D2872BB5F000F0100 /* WaitExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815EE0C2872BB5F000F0100 /* WaitExpectation.swift */; };
 		183BB3AA2871DD5600DE4B6A /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183BB3A82871DD5600DE4B6A /* UIFont+Extensions.swift */; };
 		183BB3AB2871DD5600DE4B6A /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183BB3A92871DD5600DE4B6A /* UIView+Extensions.swift */; };
 		1848A9B42870586A00399C1F /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1848A9B32870586A00399C1F /* HomeController.swift */; };
@@ -15,9 +19,6 @@
 		184BF83F284A3751000A26A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BF83E284A3751000A26A1 /* Constants.swift */; };
 		184BF841284A3940000A26A1 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BF840284A3940000A26A1 /* ConnectionManager.swift */; };
 		185FE7FE286E171A0089956E /* Business_in.json in Resources */ = {isa = PBXBuildFile; fileRef = 185FE7FC286E10030089956E /* Business_in.json */; };
-		1875D5DF286F605D002C323D /* Entertainment_in.json in Resources */ = {isa = PBXBuildFile; fileRef = 1875D5DC286F605D002C323D /* Entertainment_in.json */; };
-		1875D5E0286F605D002C323D /* Sports_in.json in Resources */ = {isa = PBXBuildFile; fileRef = 1875D5DD286F605D002C323D /* Sports_in.json */; };
-		1875D5E1286F605D002C323D /* General_in.json in Resources */ = {isa = PBXBuildFile; fileRef = 1875D5DE286F605D002C323D /* General_in.json */; };
 		1889E4D4286D7E190035537E /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889E4D3286D7E190035537E /* ErrorHandler.swift */; };
 		1889E4D6286D7E710035537E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889E4D5286D7E710035537E /* Endpoint.swift */; };
 		1889E4D9286D7ED00035537E /* CategoryEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889E4D8286D7ED00035537E /* CategoryEndpoint.swift */; };
@@ -60,7 +61,8 @@
 
 /* Begin PBXFileReference section */
 		0702FE6B69CB6D59E8AA9337 /* Pods_SampleCTAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleCTAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		181A1A56286EE9BC0049963F /* HomeViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewUITests.swift; sourceTree = "<group>"; };
+		1815EE062872B12E000F0100 /* Health_in.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Health_in.json; sourceTree = "<group>"; };
+		1815EE0C2872BB5F000F0100 /* WaitExpectation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitExpectation.swift; sourceTree = "<group>"; };
 		183BB3A82871DD5600DE4B6A /* UIFont+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		183BB3A92871DD5600DE4B6A /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		1848A9B32870586A00399C1F /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -152,11 +154,23 @@
 			path = Appdelegate;
 			sourceTree = "<group>";
 		};
+		1815EE0E2872C3AB000F0100 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				18E9FD5F284A0B060053C9AE /* Controller */,
+				18E9FD70284A0C5A0053C9AE /* View */,
+				18E9FD61284A0B250053C9AE /* View Model */,
+				18E9FD66284A0BAB0053C9AE /* Model */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
 		184BF858284CF9A5000A26A1 /* MockData */ = {
 			isa = PBXGroup;
 			children = (
 				185FE7FC286E10030089956E /* Business_in.json */,
 				1875D5DD286F605D002C323D /* Sports_in.json */,
+				1815EE062872B12E000F0100 /* Health_in.json */,
 				1875D5DC286F605D002C323D /* Entertainment_in.json */,
 				1875D5DE286F605D002C323D /* General_in.json */,
 			);
@@ -216,11 +230,8 @@
 				180E02DE2859ECCA0072C0D6 /* Appdelegate */,
 				184BF858284CF9A5000A26A1 /* MockData */,
 				18E9FD75284A0CBA0053C9AE /* Helpers */,
-				18E9FD70284A0C5A0053C9AE /* View */,
+				1815EE0E2872C3AB000F0100 /* News */,
 				18E9FD6B284A0BEC0053C9AE /* Network */,
-				18E9FD66284A0BAB0053C9AE /* Model */,
-				18E9FD61284A0B250053C9AE /* View Model */,
-				18E9FD5F284A0B060053C9AE /* Controller */,
 				18E9FD57284A0A9D0053C9AE /* Info.plist */,
 				180E02DD2859EB820072C0D6 /* Utilities */,
 			);
@@ -306,7 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				18E9FDD6284A209B0053C9AE /* SampleCTAppUITests.swift */,
-				181A1A56286EE9BC0049963F /* HomeViewUITests.swift */,
+				1815EE0C2872BB5F000F0100 /* WaitExpectation.swift */,
 				18E9FDD8284A209B0053C9AE /* Info.plist */,
 			);
 			path = SampleCTAppUITests;
@@ -365,7 +376,6 @@
 				18E9FDC2284A20670053C9AE /* Sources */,
 				18E9FDC3284A20670053C9AE /* Frameworks */,
 				18E9FDC4284A20670053C9AE /* Resources */,
-				7E08CF9F341C31EFA2F2273C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -447,10 +457,7 @@
 			files = (
 				18E9FD56284A0A9D0053C9AE /* LaunchScreen.storyboard in Resources */,
 				18E9FD53284A0A9D0053C9AE /* Assets.xcassets in Resources */,
-				1875D5E1286F605D002C323D /* General_in.json in Resources */,
 				18E9FD51284A0A8F0053C9AE /* Main.storyboard in Resources */,
-				1875D5E0286F605D002C323D /* Sports_in.json in Resources */,
-				1875D5DF286F605D002C323D /* Entertainment_in.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,7 +465,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1815EE0B2872B872000F0100 /* General_in.json in Resources */,
+				1815EE092872B869000F0100 /* Health_in.json in Resources */,
+				1815EE0A2872B86C000F0100 /* Entertainment_in.json in Resources */,
 				185FE7FE286E171A0089956E /* Business_in.json in Resources */,
+				1815EE082872B866000F0100 /* Sports_in.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,23 +520,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SampleCTApp/Pods-SampleCTApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7E08CF9F341C31EFA2F2273C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SampleCTAppTests/Pods-SampleCTAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SampleCTAppTests/Pods-SampleCTAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SampleCTAppTests/Pods-SampleCTAppTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		91F8CF4A05275CEB09A59979 /* [CP] Check Pods Manifest.lock */ = {
@@ -631,7 +625,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18E9FDD7284A209B0053C9AE /* SampleCTAppUITests.swift in Sources */,
-				181A1A57286EE9BC0049963F /* HomeViewUITests.swift in Sources */,
+				1815EE0D2872BB5F000F0100 /* WaitExpectation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

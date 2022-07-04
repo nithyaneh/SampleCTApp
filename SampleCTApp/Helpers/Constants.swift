@@ -33,7 +33,6 @@ struct Constants {
         static let okTitle = "OK"
         static let alertTitle = "Alert!"
     }
-    
     static func isCydiaAppInstalled() -> Bool {
         return UIApplication.shared.canOpenURL(URL(string: "cydia://")!)
     }

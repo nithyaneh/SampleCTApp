@@ -51,7 +51,7 @@ class HomeController: UIViewController {
     */
 
 }
-//MARK: - Extensions
+//MARK: - Extension for delegate
 
 extension HomeController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

@@ -31,12 +31,10 @@ class NewsFeedTableViewController: UITableViewController {
         loadFailWithError()
 
     }
-    
+    //MARK: - Load datae
+
     private func loadNewsDataWithTableView() {
-           
-        if (categoryTitle.isEmpty){
-            return
-        }
+
         Task { [weak self] in
                 await self?.newsDataViewModel.getData(category: categoryTitle)
             }
@@ -51,7 +49,6 @@ class NewsFeedTableViewController: UITableViewController {
     }
     
     private func loadFailWithError() {
-        // Show network error message
         newsDataViewModel.showErrorResponse = { [weak self] error in
             Task { [weak self] in
                 if let customError = error as? ErrorHandler {
@@ -107,7 +104,7 @@ extension NewsFeedTableViewController {
         cell.loadArticlesData(articleResults: articleArray)
         return cell
     }
-    func navigateToSafari(withURL url: URL) {
+   private func navigateToSafari(withURL url: URL) {
         let viewController = SFSafariViewController(url: url)
         present(viewController, animated: true)
     }

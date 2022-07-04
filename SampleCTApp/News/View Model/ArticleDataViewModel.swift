@@ -16,7 +16,6 @@ protocol ArticleDataViewProtocol {
     var showErrorResponse: ((Error) -> Void)? { get  set}
 }
 
-
 class ArticleDataViewModel: ArticleDataViewProtocol {
     
     var reloadArticleList: (([Article]) -> Void)?
@@ -26,7 +25,7 @@ class ArticleDataViewModel: ArticleDataViewProtocol {
         self.articleViewProtocol = articleViewProtocol
     }
     
-    //Observer for data loading
+    //MARK: - Observer for data loading and Error
     var reload = { ()->() in }
     
     var showErrorResponse: ((Error) -> Void)?
@@ -44,13 +43,12 @@ class ArticleDataViewModel: ArticleDataViewProtocol {
         }
     }
     
-    //Load news articles with response
+    //MARK: - Load news articles with response
     func getData(category: String) async {
-        
         if (category.isEmpty) {
+            displayError = ErrorHandler.noInput
             return
         }
-        
         let resultResp = await articleViewProtocol.sendRequest(endpoint: CategoryEndpoint.categoryCountry(category: category), responseModel: NewsSourcesResponse.self)
         switch resultResp {
         case .success(let response):
@@ -61,6 +59,5 @@ class ArticleDataViewModel: ArticleDataViewProtocol {
         case .failure(let error):
             displayError = error
         }
-        
     }
 }

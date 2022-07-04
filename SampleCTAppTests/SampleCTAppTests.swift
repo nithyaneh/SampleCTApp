@@ -18,12 +18,9 @@ class SampleCTAppTests: XCTestCase {
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test
-        // articleListViewModel = ArticleViewModel(article: )
-        
     }
     
-    
-    override func setUp() async throws {
+    override func setUp() {
         articleListViewModelTest = ArticleDataViewModel(articleViewProtocol: Webservice())
     }
     
@@ -41,6 +38,7 @@ class SampleCTAppTests: XCTestCase {
             XCTAssertNotNil(article.sourceName, "source name is not nil")
         }
     }
+    
     func testForBusinessCategorySuccess() {
         let expect = expectation(description: "API success")
         
@@ -56,6 +54,7 @@ class SampleCTAppTests: XCTestCase {
             XCTAssertNotNil(article.sourceName, "source name is not nil")
         }
     }
+    
     func testForEntertainmentCategorySuccess() {
         let expect = expectation(description: "API success")
         
@@ -71,6 +70,7 @@ class SampleCTAppTests: XCTestCase {
             XCTAssertNotNil(article.sourceName, "source name is not nil")
         }
     }
+    
     func testForGeneralCategorySuccess() {
         let expect = expectation(description: "API success")
         
@@ -98,9 +98,65 @@ class SampleCTAppTests: XCTestCase {
         XCTAssertFalse(artitlceCount > 0, "Invalid country Data error")
     }
     
-    func testForMockDataSuccess() throws {
+    func testForMockDataBusinessSuccess() throws {
         let expectation = expectation(description: "Success")
         sourceData = try getData(fromJSON: "Business_in")
+        guard let artitlceCount = sourceData?.articles.count else {return}
+        XCTAssertTrue(artitlceCount > 0, "Mock Data working")
+        if let articles = sourceData?.articles {
+            for article in articles {
+                XCTAssertNotNil(article.title, "article data is not nil")
+                XCTAssertNotNil(article.sourceName, "source name is not nil")
+            }
+        }
+        expectation.fulfill()
+        waitForExpectations(timeout: 20)
+    }
+    func testForMockDataSportsSuccess() throws {
+        let expectation = expectation(description: "Success")
+        sourceData = try getData(fromJSON: "Sports_in")
+        guard let artitlceCount = sourceData?.articles.count else {return}
+        XCTAssertTrue(artitlceCount > 0, "Mock Data working")
+        if let articles = sourceData?.articles {
+            for article in articles {
+                XCTAssertNotNil(article.title, "article data is not nil")
+                XCTAssertNotNil(article.sourceName, "source name is not nil")
+            }
+        }
+        expectation.fulfill()
+        waitForExpectations(timeout: 20)
+    }
+    func testForMockDataEntertainmentSuccess() throws {
+        let expectation = expectation(description: "Success")
+        sourceData = try getData(fromJSON: "Entertainment_in")
+        guard let artitlceCount = sourceData?.articles.count else {return}
+        XCTAssertTrue(artitlceCount > 0, "Mock Data working")
+        if let articles = sourceData?.articles {
+            for article in articles {
+                XCTAssertNotNil(article.title, "article data is not nil")
+                XCTAssertNotNil(article.sourceName, "source name is not nil")
+            }
+        }
+        expectation.fulfill()
+        waitForExpectations(timeout: 20)
+    }
+    func testForMockDataGeneralSuccess() throws {
+        let expectation = expectation(description: "Success")
+        sourceData = try getData(fromJSON: "General_in")
+        guard let artitlceCount = sourceData?.articles.count else {return}
+        XCTAssertTrue(artitlceCount > 0, "Mock Data working")
+        if let articles = sourceData?.articles {
+            for article in articles {
+                XCTAssertNotNil(article.title, "article data is not nil")
+                XCTAssertNotNil(article.sourceName, "source name is not nil")
+            }
+        }
+        expectation.fulfill()
+        waitForExpectations(timeout: 20)
+    }
+    func testForMockDataHealthSuccess() throws {
+        let expectation = expectation(description: "Success")
+        sourceData = try getData(fromJSON: "Health_in")
         guard let artitlceCount = sourceData?.articles.count else {return}
         XCTAssertTrue(artitlceCount > 0, "Mock Data working")
         if let articles = sourceData?.articles {

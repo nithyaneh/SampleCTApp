@@ -14,8 +14,9 @@ enum ErrorHandler: Error {
     case invalidURL
     case noResponse
     case unauthorized
-    case unexpectedStatusCode
     case unknown
+    case unexpectedStatusCode
+    case noInput
     var customMessage: String {
         switch self {
         case .connectionError:
@@ -26,6 +27,8 @@ enum ErrorHandler: Error {
             return "Invalid url is loaded"
         case .noResponse:
             return "No data is available"
+        case .noInput:
+            return "No input is given"
         default:
             return "Invalid Data is given"
         }
