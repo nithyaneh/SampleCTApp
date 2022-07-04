@@ -19,7 +19,7 @@
    Code is developed in **Swift 5**, built on **Xcode 13.3** executable on **iOS 15**
    Unit test and UI test covered using native XCTest and XCUITest. Coverage for most of the added classes is more than ~87%
    
-   ![image](https://user-images.githubusercontent.com/96475407/177120144-f16b1dbf-25af-4565-b621-e0f3fca93078.png)
+   ![image](https://user-images.githubusercontent.com/96475407/177158508-a10ec3b7-f2b8-4edb-9ef8-630083e14c8c.png)
 
 
 # ScreenShots
